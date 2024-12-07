@@ -5,7 +5,6 @@ clean:
 	rm derived_data/*
 	rm report.html
 
-<<<<<<< Updated upstream
 report.html: report.Rmd ./figures/age_scatterplots.png ./figures/descriptive_scatterplots.png ./figures/injury_vs_position_box.png ./figures/injury_vs_league_box.png ./figures/season_injury_box.png ./figures/total_inj_count_line.png ./figures/monthly_injury_rate.png ./figures/residual_plots.png ./figures/inj_category_bar.png
 	R -e "rmarkdown::render('report.Rmd', output_format = 'html_document')"
 
@@ -16,25 +15,12 @@ report.pdf: report.Rmd ./figures/age_scatterplots.png ./figures/descriptive_scat
 	Rscript scripts/clean_data.R
 
 ./figures/total_inj_count_line.png: derived_data/clean_data.csv scripts/line_graphs.R
-=======
-report.html: report.Rmd ./figures/inj_count_line.png
-	R -e "rmarkdown::render('report.Rmd', output_format = 'html_document')"
-
-./derived_data/clean_data.csv: source_data/injuries.csv source_data/players_info.csv scripts/clean_data.R
-	Rscript scripts/clean_data.R
-
-./figures/inj_count_line.png: derived_data/clean_data.csv scripts/line_graphs.R
->>>>>>> Stashed changes
 	Rscript scripts/line_graphs.R
 
 ./derived_data/injuries_per_player.csv: derived_data/clean_data.csv scripts/injuries_per_player.R
 	Rscript scripts/injuries_per_player.R
 
-<<<<<<< Updated upstream
 ./figures/season_injury_box.png: derived_data/clean_data.csv scripts/season_injury_box.R
-=======
-./figures/season_injury_box.png: derived_data/injuries_per_player.csv scripts/season_injury_box.R
->>>>>>> Stashed changes
 	Rscript scripts/season_injury_box.R
 
 ./figures/injury_vs_league_box.png: derived_data/injuries_per_player.csv scripts/injury_vs_league_box.R
@@ -43,7 +29,6 @@ report.html: report.Rmd ./figures/inj_count_line.png
 ./figures/injury_vs_position_box.png: derived_data/injuries_per_player.csv scripts/injury_vs_position_box.R
 	Rscript scripts/injury_vs_position_box.R
 
-<<<<<<< Updated upstream
 ./figures/descriptive_scatterplots.png: derived_data/injuries_per_player.csv scripts/descriptive_scatter.R
 	Rscript scripts/descriptive_scatter.R
 
@@ -59,7 +44,3 @@ report.html: report.Rmd ./figures/inj_count_line.png
 ./figures/inj_category_bar.png: derived_data/clean_data.csv scripts/inj_category_bar.R
 	Rscript scripts/inj_category_bar.R
 
-=======
-./figures/injury_scatterplots.png: derived_data/injuries_per_player.csv scripts/injury_scatterplots.R
-	Rscript scripts/injury_scatterplots.R
->>>>>>> Stashed changes
