@@ -41,6 +41,6 @@ Once you are connected to port 8787 and want to build the report.html file for t
 cd work
 make report.html
 ```
-Once you have cd'd into the working directory, you should be able to make whichever .csv or .png files you wish using the same syntax as above (replace report.html with the file you would like to create using Make. 
+Once you have cd'd into the working directory, you should be able to make whichever .csv or .png files you wish using the same syntax as above (replace report.html with the file you would like to create using Make). 
 
 ****Please Note:** I used an M2 Mac to create this project. Using a different type of computer may require you to alter the code I have provided above.  
