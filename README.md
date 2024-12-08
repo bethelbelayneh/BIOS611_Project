@@ -32,8 +32,9 @@ The docker container should be built and running. It may take a few minutes to b
 docker build . -t 611
 docker run -p 8787:8787 -p 8888:8888 -e PASSWORD=pw -v $(pwd):/home/rstudio/work -it 611
 ```
-Once the Docker container is built and running, open your browser and type "**localhost:8787**" into the address line. Use the following as your login information: 
+Once the Docker container is built and running, open your browser and type **localhost:8787** into the address line. Use the following as your login information: 
 > _Username:_ rstudio
+
 > _Password:_ pw
 
 Once you are connected to port 8787, you will be able to build the report.html file (or report.pdf, among other files in this project). Open the terminal in your Rstudio session and type:
