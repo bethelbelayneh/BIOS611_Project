@@ -45,6 +45,6 @@ Once you are connected to port 8787, you will be able to build the report.html f
 cd work
 make report.html
 ```
-Once you have changed your directory to the working directory, you should be able to make whichever .csv or .png files you wish using the same syntax as above (replace report.html with the file you would like to create using Make). 
+Once you have changed your directory to the working directory, you should be able to make whichever .csv or .png files you wish using the same syntax as above (replace report.html with the file you would like to create using Make). If you wish to clean the derived data and figures folder, along with the report.html file, run *make clean*. If you would like to rebuild all contents of this project from the written Rscripts and source data, run *make report.html* again in your Rstudio terminal. 
 
 ****Please Note:** I used an M2 Mac to create this project. Using a different type of computer may require you to alter the code I have provided above.  
