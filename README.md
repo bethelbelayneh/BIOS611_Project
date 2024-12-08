@@ -17,6 +17,7 @@ I merged the two datasets on season, fifa_version, player_name, and short_name. 
 
 >_One important thing to note:_ Player names were formatted differently in each dataset, resulting in 10,948 unmatched rows in the injuries dataset that were ultimately not included in my final analysis. Although about 11,000 rows from the injuries dataset were not merged with the FIFA dataset, the injuries dataset had not yet been filtered for league name, meaning that the missing data for the analysis I performed is likely not as large as 11,000 observations. 
 
+The source data for this project is not in this repository because the file is too large. The .csv files are in a Google Drive folder at this [link](https://drive.google.com/drive/folders/1vB-bF35YjklUL3vWBPghjxpxotjRs3TA?usp=sharing). Please download the source data and save it in a directory titled "source_data" within the BIOS611_project directory. 
 
 ## Using This Repository
 You will need Docker to access this project. The start.sh file in this repository includes the bash script necessary to build and run the docker container that contains this project. Once you have Docker downloaded and running, write the following in your terminal: 
