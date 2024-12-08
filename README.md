@@ -19,28 +19,28 @@ I merged the two datasets on season, fifa_version, player_name, and short_name. 
 
 
 ## Using This Repository
-You will need Docker to access this project. The start.sh file in this repository includes the bash script necessary to build and run the docker container that contains this project. 
-Run this code: 
+You will need Docker to access this project. The start.sh file in this repository includes the bash script necessary to build and run the docker container that contains this project. Once you have Docker downloaded and running, write the following in your terminal: 
+
 ```bash
+git clone https://github.com/bethelbelayneh/BIOS611_Project.git
+cd BIOS611_project
 bash start.sh
 ```
-The docker container should be built and running. It may take a few seconds to build. Here is the script included in the start.sh file: 
+The docker container should be built and running. It may take a few minutes to build. For your reference, here is the script that is included in the start.sh file: 
 ```bash
 #!/bin/bash
 docker build . -t 611
 docker run -p 8787:8787 -p 8888:8888 -e PASSWORD=pw -v $(pwd):/home/rstudio/work -it 611
 ```
-Now that the Docker container is running, open your browser and type "**localhost:8787**" into the address line. 
+Once the Docker container is built and running, open your browser and type "**localhost:8787**" into the address line. Use the following as your login information: 
 > _Username:_ rstudio
-
 > _Password:_ pw
 
-
-Once you are connected to port 8787 and want to build the report.html file for this project, open the terminal in your Rstudio session and type:
+Once you are connected to port 8787, you will be able to build the report.html file (or report.pdf, among other files in this project). Open the terminal in your Rstudio session and type:
 ```bash
 cd work
 make report.html
 ```
-Once you have cd'd into the working directory, you should be able to make whichever .csv or .png files you wish using the same syntax as above (replace report.html with the file you would like to create using Make). 
+Once you have changed your directory to the working directory, you should be able to make whichever .csv or .png files you wish using the same syntax as above (replace report.html with the file you would like to create using Make). 
 
 ****Please Note:** I used an M2 Mac to create this project. Using a different type of computer may require you to alter the code I have provided above.  
